@@ -1,0 +1,26 @@
+---
+apiVersion: infrastructure.cluster.x-k8s.io/v1beta1
+kind: VSphereMachineTemplate
+metadata:
+  name: arbol
+  namespace: shared-services
+spec:
+  template:
+    spec:
+      cloneMode: linkedClone
+      datacenter: /garage
+      datastore: /garage/datastore/vsanDatastore
+      diskGiB: 25
+      folder: /garage/vm/clusters
+      memoryMiB: 8192
+      network:
+        devices:
+          - dhcp4: true
+            networkName: /garage/network/kurl-pg
+      numCPUs: 2
+      os: Linux
+      resourcePool: /garage/host/homelab/Resources/clusters
+      server: vcenter.lab.shortrib.net
+      storagePolicyName: vsan
+      template: TEMPLATE_NAME_HERE
+      thumbprint: 15:DF:3E:7E:15:A8:CA:5D:BE:9F:B3:46:14:89:7F:99:FB:1B:60:0C

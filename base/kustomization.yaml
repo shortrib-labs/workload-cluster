@@ -1,5 +1,24 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
+- cluster-arbol.yml
 - cluster.yaml
+- clusterresourceset-arbol-crs-0.yml
+- configmap-cpi-manifests.yml
+- configmap-csi.vsphere.vmware.com.yml
+- configmap-vsphere-csi-controller-binding.yml
+- configmap-vsphere-csi-controller-role.yml
+- configmap-vsphere-csi-controller.yml
+- configmap-vsphere-csi-node.yml
+- kubeadmconfigtemplate-arbol-md-0.yml
+- kubeadmcontrolplane-arbol.yml
+- machinedeployment-arbol-md-0.yml
+- secret-arbol.yml
+- secret-cloud-controller-manager.yml
+- secret-cloud-provider-vsphere-credentials.yml
+- secret-csi-vsphere-config.yml
+- secret-vsphere-csi-controller.yml
 - secrets.yaml
+- vspherecluster-arbol.yml
+- vspheremachinetemplate-arbol-worker.yml
+- vspheremachinetemplate-arbol.yml

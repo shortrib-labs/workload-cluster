@@ -1,0 +1,15 @@
+---
+apiVersion: infrastructure.cluster.x-k8s.io/v1beta1
+kind: VSphereCluster
+metadata:
+  name: arbol
+  namespace: shared-services
+spec:
+  controlPlaneEndpoint:
+    host: 10.26.0.101
+    port: 6443
+  identityRef:
+    kind: Secret
+    name: arbol
+  server: vcenter.lab.shortrib.net
+  thumbprint: 15:DF:3E:7E:15:A8:CA:5D:BE:9F:B3:46:14:89:7F:99:FB:1B:60:0C
